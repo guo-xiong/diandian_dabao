@@ -1,0 +1,15 @@
+        // load scene
+        loadScene(launchScene);
+
+        if ((cc.sys.os === cc.sys.OS_IOS || cc.sys.os === cc.sys.OS_OSX) && cc.sys.isBrowser && /(OS 1[4-9])|(Version\/1[4-9])/.test(window.navigator.userAgent)) {
+            cc.MeshBuffer.prototype.checkAndSwitchBuffer = function(vertexCount) {
+                if (this.vertexOffset + vertexCount > 65535) {
+                    this.uploadData();
+                    this.batcher.flush();
+                }
+            };
+            cc.MeshBuffer.prototype.forwardIndiceStartToOffset = function() {
+                this.uploadData();
+                this.switchBuffer();
+            }
+        }
