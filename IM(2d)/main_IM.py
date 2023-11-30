@@ -50,8 +50,6 @@ res = path + "\\res.js"
 
 
 
-
-
 print("Applovin")
 #创建一个新文件Applovin.html
 newFile = path + "\\"+IM_name+"_Applovin.html"
@@ -69,13 +67,11 @@ copy(res,path + "\\"+IM_name+"_Facebook\\res.js")
 with open(newFile, 'r',encoding='utf-8') as file:
     filedata = file.read()
     filedata = remove_between_strings(filedata,"<script","</script>")
-    with open(newFile, 'w',encoding='utf-8') as file:
-            file.write(filedata)
-            
+with open(newFile, 'w',encoding='utf-8') as file:
+    file.write(filedata)
 with open("IM(2d)\\Facebook_tz.txt",'r',encoding='utf-8') as file:
     new = file.read()
     replaceFile("IM(2d)\\log.txt",newFile,new)
-
 with open("IM(2d)\\Facebook_head_new.txt",'r',encoding='utf-8') as file:
     new = file.read()
     replaceFile("IM(2d)\\Facebook_head.txt",newFile,new)
