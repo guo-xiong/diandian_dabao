@@ -1,4 +1,5 @@
 import os
+import zipfile
 def copy(path1,path2):
     file1 = open(path1, 'r',encoding='utf-8')
     os.makedirs(os.path.dirname(path2), exist_ok=True)
@@ -34,13 +35,17 @@ def remove_between_strings(input_str, start_str, end_str):
         return input_str
 
 
+def create_zip_file(file1_path, file2_path, zip_file_path,file1,file2):
+    with zipfile.ZipFile(zip_file_path, 'w') as zip_file:
+        zip_file.write(file1_path,file1)
+        zip_file.write(file2_path,file2)
+
 path = input("文件路径：")
 #项目名
 IM_name = input("项目名:")
 
 indexFile = path + "\\index.html"
 res = path + "\\res.js"
-
 
 
 
@@ -74,8 +79,10 @@ with open("IM(2d)\\Facebook_tz.txt",'r',encoding='utf-8') as file:
 with open("IM(2d)\\Facebook_head_new.txt",'r',encoding='utf-8') as file:
     new = file.read()
     replaceFile("IM(2d)\\Facebook_head.txt",newFile,new)
-
-
+    file1_path = path + "\\"+IM_name+"_Facebook\\index.html"
+    file2_path = path + "\\"+IM_name+"_Facebook\\res.js"
+    zip_file_path = path + "\\"+IM_name+"_Facebook.zip"
+    create_zip_file(file1_path, file2_path, zip_file_path,"index.html","res.js")
 
 
 # print("Google")
