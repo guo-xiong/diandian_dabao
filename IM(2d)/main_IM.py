@@ -35,10 +35,13 @@ def remove_between_strings(input_str, start_str, end_str):
         return input_str
 
 
-def create_zip_file(file1_path, file2_path, zip_file_path,file1,file2):
+def create_FacebookZip_file(file1_path, file2_path, zip_file_path,file1,file2):
     with zipfile.ZipFile(zip_file_path, 'w') as zip_file:
         zip_file.write(file1_path,file1)
         zip_file.write(file2_path,file2)
+def create_GoogleZip_file(file1_path, zip_file_path,file1):
+    with zipfile.ZipFile(zip_file_path, 'w') as zip_file:
+        zip_file.write(file1_path,file1)
 
 path = input("文件路径：")
 #项目名
@@ -78,30 +81,36 @@ with open("IM(2d)\\Facebook_head_new.txt",'r',encoding='utf-8') as file:
     file1_path = path + "\\"+IM_name+"_Facebook\\index.html"
     file2_path = path + "\\"+IM_name+"_Facebook\\res.js"
     zip_file_path = path + "\\"+IM_name+"_Facebook.zip"
-    create_zip_file(file1_path, file2_path, zip_file_path,"index.html","res.js")
+    create_FacebookZip_file(file1_path, file2_path, zip_file_path,"index.html","res.js")
 
 
-# print("Google")
-# #Google
-# newFile = path + "\\"+IM_name+"_Google\\index.html"
-# copy(indexFile,newFile)
-# with open("IM(2d)\\Google_tz.txt",'r',encoding='utf-8') as file:
-#     new = file.read()
-#     replaceFile("IM(2d)\\log.txt",newFile,new)
+print("Ironsource")
+#Ironsource
+newFile = path + "\\"+IM_name+"_Ironsource.html"
+copy(indexFile,newFile)
+with open("IM(2d)\\Ironsource_tz.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("IM(2d)\\log.txt",newFile,new)
+with open("IM(2d)\\Ironsource_head_new.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("IM(2d)\\Ironsource_head.txt",newFile,new)
+with open("IM(2d)\\Ironsource_end_new.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("IM(2d)\\Ironsource_end.txt",newFile,new)
+    
 
-# with open("IM(2d)\\Google_head_new.txt",'r',encoding='utf-8') as file:
-#     new = file.read()
-#     replaceFile("IM(2d)\\Google_head.txt",newFile,new)
+print("Google")
+#Google
+newFile = path + "\\"+IM_name+"_Google\\index.html"
+copy(indexFile,newFile)
+with open("IM(2d)\\Google_tz.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("IM(2d)\\log.txt",newFile,new)
 
-# print("Tiktok")
-# #Tiktok
-# newFile = path + "\\"+IM_name+"_Tiktok\\index.html"
-# copy(indexFile,newFile)
-# copy("IM(2d)\\config.json",path + "\\"+IM_name+"_Tiktok\\config.json")
-# with open("IM(2d)\\Tiktok_tz.txt",'r',encoding='utf-8') as file:
-#     new = file.read()
-#     replaceFile("IM(2d)\\log.txt",newFile,new)
+with open("IM(2d)\\Google_head_new.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("IM(2d)\\Google_head.txt",newFile,new)
+    file1_path = path + "\\"+IM_name+"_Google\\index.html"
+    zip_file_path = path + "\\"+IM_name+"_Google.zip"
+    create_GoogleZip_file(file1_path, zip_file_path,"index.html")
 
-# with open("IM(2d)\\Tiktok_head_new.txt",'r',encoding='utf-8') as file:
-#     new = file.read()
-#     replaceFile("IM(2d)\\Tiktok_head.txt",newFile,new)
