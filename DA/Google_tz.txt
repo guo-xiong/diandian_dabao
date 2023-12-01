@@ -1,1 +1,1 @@
-ExitApi.exit();
+ExitApi.exit()
