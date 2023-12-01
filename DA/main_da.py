@@ -1,4 +1,6 @@
 import os
+import zipfile
+
 def copy(path1,path2):
     file1 = open(path1, 'r',encoding='utf-8')
     os.makedirs(os.path.dirname(path2), exist_ok=True)
@@ -33,6 +35,20 @@ def remove_between_strings(input_str, start_str, end_str):
         # 如果未找到指定的子字符串，则返回原始字符串
         return input_str
 
+def create_zip_with_files(zip_filename, files_to_add):
+    with zipfile.ZipFile(zip_filename, 'w',compression=zipfile.ZIP_DEFLATED) as myzip:
+        for file_path in files_to_add:
+            # 指定文件在 zip 文件中的路径
+            arcname = os.path.basename(file_path)
+            myzip.write(file_path, arcname=arcname)
+
+# 示例用法
+# zip_filename = 'example.zip'
+# files_to_add = ['DA\\config.json', 'DA\\da_link.txt', 'DA\\Facebook_head.txt']
+
+# create_zip_with_files(zip_filename, files_to_add)
+
+
 
 path = input("文件路径：")
 #项目名
@@ -48,6 +64,8 @@ copy(indexFile,newFile)
 with open("DA\\da_link.txt",'r',encoding='utf-8') as file:
     da_link = file.read()
     replaceFile("DA\\log.txt",newFile,da_link)
+
+
 
 print("Facebook")
 #Facebook
@@ -69,6 +87,8 @@ with open("DA\\Facebook_head_new.txt",'r',encoding='utf-8') as file:
     new = file.read()
     replaceFile("DA\\Facebook_head.txt",newFile,new)
 
+#添加压缩文件
+create_zip_with_files(path + "\\"+da_name+"_Facebook.zip", [newFile,path + "\\"+da_name+"_Facebook\\res.js"])
 
 
 
@@ -84,6 +104,9 @@ with open("DA\\Google_head_new.txt",'r',encoding='utf-8') as file:
     new = file.read()
     replaceFile("DA\\Google_head.txt",newFile,new)
 
+#添加压缩文件
+create_zip_with_files(path + "\\"+da_name+"_Google.zip", [newFile])
+
 print("Tiktok")
 #Tiktok
 newFile = path + "\\"+da_name+"_Tiktok\\index.html"
@@ -96,3 +119,6 @@ with open("DA\\Tiktok_tz.txt",'r',encoding='utf-8') as file:
 with open("DA\\Tiktok_head_new.txt",'r',encoding='utf-8') as file:
     new = file.read()
     replaceFile("DA\\Tiktok_head.txt",newFile,new)
+
+#添加压缩文件
+create_zip_with_files(path + "\\"+da_name+"_Tiktok.zip", [newFile,path + "\\"+da_name+"_Tiktok\\config.json"])
