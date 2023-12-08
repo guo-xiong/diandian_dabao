@@ -117,7 +117,11 @@ replaceFile(newFile,branch_path + "log.txt",branch_path+"link.txt")
 replaceFile(newFile,branch_path + "unity_old1.txt",branch_path+"unity_new1.txt")
 
 print("Vungle")
-newFile = path + "\\"+da_name+"_Vungle.html"
+newFile = path + "\\"+da_name+"_Vungle\\index.html"
 copy(indexFile,newFile)
+#添加压缩文件
+create_zip_with_files(path + "\\"+da_name+"_Vungle.zip", [newFile])
+
+print("完成")
 
 
