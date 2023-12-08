@@ -89,3 +89,35 @@ replaceFile(newFile,branch_path + "log.txt",branch_path+"lr_tz.txt")
 replaceFile(newFile,branch_path + "lr_old1.txt",branch_path+"lr_new1.txt")
 
 print("Liftoff")
+newFile = path + "\\"+da_name+"_Liftoff\\index.html"
+copy(indexFile,newFile)
+replaceFile(newFile,branch_path + "log.txt",branch_path+"link.txt")
+#添加压缩文件
+create_zip_with_files(path + "\\"+da_name+"_Liftoff.zip", [newFile])
+
+print("Moloco")
+newFile = path + "\\"+da_name+"_Moloco.html"
+copy(indexFile,newFile)
+replaceFile(newFile,branch_path + "log.txt",branch_path+"moloco_tz.txt")
+replaceFile(newFile,branch_path + "moloco_old1.txt",branch_path+"moloco_new1.txt")
+
+print("Tiktok")
+newFile = path + "\\"+da_name+"_Tiktok\\index.html"
+copy(indexFile,newFile)
+copy(branch_path+"config.json",path + "\\"+da_name+"_Tiktok\\config.json")
+replaceFile(newFile,branch_path + "head.txt",branch_path+"tiktok_head.txt")
+replaceFile(newFile,branch_path + "log.txt",branch_path+"Tiktok_tz.txt")
+#添加压缩文件
+create_zip_with_files(path + "\\"+da_name+"_Tiktok.zip", [newFile,path + "\\"+da_name+"_Tiktok\\config.json"])
+
+print("Unity")
+newFile = path + "\\"+da_name+"_Unity.html"
+copy(indexFile,newFile)
+replaceFile(newFile,branch_path + "log.txt",branch_path+"link.txt")
+replaceFile(newFile,branch_path + "unity_old1.txt",branch_path+"unity_new1.txt")
+
+print("Vungle")
+newFile = path + "\\"+da_name+"_Vungle.html"
+copy(indexFile,newFile)
+
+
