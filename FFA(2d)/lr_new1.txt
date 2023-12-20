@@ -1,0 +1,43 @@
+<script type="text/javascript">
+window.onload = function(){
+(dapi.isReady()) ? onReadyCallback() : dapi.addEventListener("ready", onReadyCallback); 
+//here you can put other code that not related to dapi logic
+};
+function onReadyCallback(){
+//no need to listen to this event anymore
+dapi.removeEventListener("ready", onReadyCallback);
+let isAudioEnabled = !!dapi.getAudioVolume();   
+if(dapi.isViewable()){
+adVisibleCallback({isViewable: true});
+}
+dapi.addEventListener("viewableChange", adVisibleCallback);
+dapi.addEventListener("adResized", adResizeCallback);
+dapi.addEventListener("audioVolumeChange", audioVolumeChangeCallback);
+}
+function adVisibleCallback(event){
+console.log("isViewable " + event.isViewable);
+if (event.isViewable){
+var screenSize = dapi.getScreenSize();
+// var parent=document.body;var child=document.getElementById('gif');parent.removeChild(child);
+//START or RESUME the ad
+window.boot();
+} else {
+// var parent=document.body;var child=document.getElementById('gif');parent.removeChild(child);
+//PAUSE the ad and MUTE sounds
+}}
+function adResizeCallback(event){
+var screenSize = event;
+console.log("ad was resized width " + event.width + " height " + event.height);
+}
+function audioVolumeChangeCallback(volume){
+let isAudioEnabled = !!volume;
+if (isAudioEnabled){
+  window.isMute = false;
+  window.muteClose();
+//START or turn on the sound
+} else {
+  window.isMute = true;
+  window.muteOpen();
+//PAUSE the turn off the sound
+}}
+</script>

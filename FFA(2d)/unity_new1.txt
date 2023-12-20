@@ -1,0 +1,18 @@
+<script type="text/javascript">
+if(mraid.getState()==="loading"){
+mraid.addEventListener("ready",onSdkReady)
+}else{
+onSdkReady()
+};
+function viewableChangeHandler(viewable){
+if(viewable){
+  window.boot();
+}else{}
+};
+function onSdkReady(){
+mraid.addEventListener("viewableChange",viewableChangeHandler);
+if(mraid.isViewable()){
+window.boot();
+}
+}
+</script>
