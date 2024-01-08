@@ -97,3 +97,9 @@ with open("FCT(2d)\\Google_head_new.txt",'r',encoding='utf-8') as file:
 
 create_zip_with_files(zip_file_path,[path + "\\"+FCT_name+"_Google\\index.html"])
 
+print("Moloco")
+newFile = path + "\\"+FCT_name+"_Moloco.html"
+copy(indexFile,newFile)
+replaceFile("FCT(2d)\\log.txt",newFile,new)
+replaceFile("FCT(2d)\\moloco_old1.txt",newFile,"FCT(2d)\\moloco_new1.txt")
+
