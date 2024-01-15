@@ -1,0 +1,1 @@
+cc.sys.os==cc.sys.OS_IOS?mraid.open("https://apps.apple.com/hk/app/%E5%A4%A2%E5%A2%83%E5%81%B5%E6%8E%A2-%E5%90%88%E6%88%90%E7%AF%87/id6448940301?l=en"):mraid.open("https://play.google.com/store/apps/details?id=com.dreammerge.asia")
