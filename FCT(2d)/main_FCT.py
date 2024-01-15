@@ -103,3 +103,17 @@ copy(indexFile,newFile)
 replaceFile("FCT(2d)\\log.txt",newFile,new)
 replaceFile("FCT(2d)\\moloco_old1.txt",newFile,"FCT(2d)\\moloco_new1.txt")
 
+print("Ironsource")
+#Ironsource
+newFile = path + "\\"+FCT_name+"_Ironsource.html"
+copy(indexFile,newFile)
+with open("FCT(2d)\\Ironsource_tz.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("FCT(2d)\\log.txt",newFile,new)
+with open("FCT(2d)\\Ironsource_head_new.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("FCT(2d)\\Ironsource_head.txt",newFile,new)
+with open("FCT(2d)\\Ironsource_end_new.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("FCT(2d)\\Ironsource_end.txt",newFile,new)
+    
