@@ -91,6 +91,19 @@ with open("DA\\Facebook_head_new.txt",'r',encoding='utf-8') as file:
 create_zip_with_files(path + "\\"+da_name+"_Facebook.zip", [newFile,path + "\\"+da_name+"_Facebook\\res.js"])
 
 
+print("Ironsource")
+#Ironsource
+newFile = path + "\\"+da_name+"_Ironsource.html"
+copy(indexFile,newFile)
+with open("DA\\Ironsource_tz.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("DA\\log.txt",newFile,new)
+with open("DA\\Ironsource_head_new.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("DA\\Ironsource_head.txt",newFile,new)
+with open("DA\\Ironsource_end_new.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("DA\\Ironsource_end.txt",newFile,new)
 
 print("Google")
 #Google
