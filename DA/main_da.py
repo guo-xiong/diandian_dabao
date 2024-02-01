@@ -133,5 +133,18 @@ with open("DA\\Tiktok_head_new.txt",'r',encoding='utf-8') as file:
     new = file.read()
     replaceFile("DA\\Tiktok_head.txt",newFile,new)
 
+print("Liftoff")
+newFile = path + "\\"+da_name+"_Liftoff\\index.html"
+copy(indexFile,newFile)
+replaceFile(newFile,"DA\\log.txt","DA\\da_link.txt")
+#添加压缩文件
+create_zip_with_files(path + "\\"+da_name+"_Liftoff.zip", [newFile])
+
 #添加压缩文件
 create_zip_with_files(path + "\\"+da_name+"_Tiktok.zip", [newFile,path + "\\"+da_name+"_Tiktok\\config.json"])
+
+print("Moloco")
+newFile = path + "\\"+da_name+"_Moloco.html"
+copy(indexFile,newFile)
+replaceFile("DA\\log.txt",newFile,new)
+replaceFile("DA\\moloco_old1.txt",newFile,"DA\\moloco_new1.txt")
