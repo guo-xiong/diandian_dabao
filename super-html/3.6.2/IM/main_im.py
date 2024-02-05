@@ -70,7 +70,7 @@ path = input("文件路径：")
 #项目名
 da_name = input("项目名:")
 #当前分支路径
-branch_path = "super-html\\3.6.2\\GOF\\"
+branch_path = "super-html\\3.6.2\\IM\\"
 
 print("Applovin")
 indexFile = path + "\\Applovin.html"
@@ -97,34 +97,34 @@ copy(indexFile,newFile)
 replaceFile(newFile,branch_path + "startGame.txt",branch_path+"startGame_new.txt")
 replaceFile(newFile,branch_path + "startGame_end.txt",branch_path+"startGame_end_new.txt")
 
-print("Liftoff")
-indexFile = path + "\\Liftoff"
-files_in_folder = list_files_in_folder(indexFile)
-#添加压缩文件
-create_zip_with_files(path + "\\new\\" + da_name + "_Liftoff.zip", files_in_folder)
+# print("Liftoff")
+# indexFile = path + "\\Liftoff"
+# files_in_folder = list_files_in_folder(indexFile)
+# #添加压缩文件
+# create_zip_with_files(path + "\\new\\" + da_name + "_Liftoff.zip", files_in_folder)
 
-print("Moloco")
-indexFile = path + "\\Moloco.html"
-newFile = path + "\\new\\"+da_name+"_Moloco.html"
-copy(indexFile,newFile)
+# print("Moloco")
+# indexFile = path + "\\Moloco.html"
+# newFile = path + "\\new\\"+da_name+"_Moloco.html"
+# copy(indexFile,newFile)
 
-print("Tiktok")
-indexFile = path + "\\Tiktok"
-files_in_folder = list_files_in_folder(indexFile)
-#添加压缩文件
-create_zip_with_files(path + "\\new\\" + da_name + "_Tiktok.zip", files_in_folder)
+# print("Tiktok")
+# indexFile = path + "\\Tiktok"
+# files_in_folder = list_files_in_folder(indexFile)
+# #添加压缩文件
+# create_zip_with_files(path + "\\new\\" + da_name + "_Tiktok.zip", files_in_folder)
 
-print("Unity")
-indexFile = path + "\\Unity.html"
-newFile = path + "\\new\\"+da_name+"_Unity.html"
-copy(indexFile,newFile)
-replaceFile(newFile,branch_path + "log.txt",branch_path+"link.txt")
+# print("Unity")
+# indexFile = path + "\\Unity.html"
+# newFile = path + "\\new\\"+da_name+"_Unity.html"
+# copy(indexFile,newFile)
+# replaceFile(newFile,branch_path + "log.txt",branch_path+"link.txt")
 
-print("Vungle")
-indexFile = path + "\\Vungle"
-files_in_folder = list_files_in_folder(indexFile)
-#添加压缩文件
-create_zip_with_files(path + "\\new\\" + da_name + "_Vungle.zip", files_in_folder)
+# print("Vungle")
+# indexFile = path + "\\Vungle"
+# files_in_folder = list_files_in_folder(indexFile)
+# #添加压缩文件
+# create_zip_with_files(path + "\\new\\" + da_name + "_Vungle.zip", files_in_folder)
 
 print("完成")
 
