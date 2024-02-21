@@ -94,8 +94,8 @@ print("Ironsource")
 indexFile = path + "\\Ironsource.html"
 newFile = path + "\\new\\"+da_name+"_Ironsource.html"
 copy(indexFile,newFile)
-replaceFile(newFile,branch_path + "startGame.txt",branch_path+"startGame_new.txt")
-replaceFile(newFile,branch_path + "startGame_end.txt",branch_path+"startGame_end_new.txt")
+# replaceFile(newFile,branch_path + "startGame.txt",branch_path+"startGame_new.txt")
+# replaceFile(newFile,branch_path + "startGame_end.txt",branch_path+"startGame_end_new.txt")
 
 print("Liftoff")
 indexFile = path + "\\Liftoff"
