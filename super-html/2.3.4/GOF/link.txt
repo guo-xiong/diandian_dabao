@@ -1,0 +1,1 @@
+cc.sys.os==cc.sys.OS_IOS?mraid.open("https://apps.apple.com/hk/app/white-out-survival/id6443575749?platform=iphone"):mraid.open("https://play.google.com/store/apps/details?id=com.gof.global")
