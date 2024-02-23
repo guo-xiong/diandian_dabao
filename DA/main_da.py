@@ -146,5 +146,9 @@ create_zip_with_files(path + "\\"+da_name+"_Tiktok.zip", [newFile,path + "\\"+da
 print("Moloco")
 newFile = path + "\\"+da_name+"_Moloco.html"
 copy(indexFile,newFile)
-replaceFile("DA\\log.txt",newFile,new)
-replaceFile("DA\\moloco_old1.txt",newFile,"DA\\moloco_new1.txt")
+with open("DA\\moloco_tz.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("DA\\log.txt",newFile,new)
+with open("DA\\moloco_new1.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("DA\\moloco_old1.txt",newFile,new)

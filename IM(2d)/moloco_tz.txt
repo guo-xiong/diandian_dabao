@@ -1,1 +1,1 @@
-dapi.openStoreUrl()
+FbPlayableAd.onCTAClick() 

@@ -115,6 +115,10 @@ create_zip_with_files(zip_file_path,[path + "\\"+IM_name+"_Google\\index.html"])
 print("Moloco")
 newFile = path + "\\"+IM_name+"_Moloco.html"
 copy(indexFile,newFile)
-replaceFile("IM(2d)\\log.txt",newFile,new)
-replaceFile("IM(2d)\\moloco_old1.txt",newFile,"IM(2d)\\moloco_new1.txt")
+with open("IM(2d)\\moloco_tz.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("IM(2d)\\log.txt",newFile,new)
+with open("IM(2d)\\moloco_new1.txt",'r',encoding='utf-8') as file:
+    new = file.read()
+    replaceFile("IM(2d)\\moloco_old1.txt",newFile,new)
 
