@@ -1,0 +1,1 @@
+cc.sys.os==cc.sys.OS_IOS?mraid.open("https://apps.apple.com/au/app/dragonscapes-adventure/id1515511378"):mraid.open("https://play.google.com/store/apps/details?id=com.dragonscapes.global&hl=en&gl=US")
