@@ -1,1 +1,5 @@
-暂时DA完成，IM完成app和facebook，后续会持续更新
+main_ZIP  使用方法
+
+1.python 启动main_ZIP
+2.把包含自己所有项目的文件夹拖到    文件路径
+3.把要保存的位置拖到  保存路径
