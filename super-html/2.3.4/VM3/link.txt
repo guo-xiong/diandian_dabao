@@ -1,0 +1,1 @@
+cc.sys.os==cc.sys.OS_IOS?mraid.open("https://apps.apple.com/us/app/truck-star/id6476976929"):mraid.open("https://play.google.com/store/apps/details?id=com.vm3.global")
