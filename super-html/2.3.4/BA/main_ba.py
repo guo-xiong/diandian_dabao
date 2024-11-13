@@ -72,11 +72,19 @@ da_name = input("项目名:")
 #当前分支路径
 branch_path = "super-html\\2.3.4\\BA\\"
 
+
 print("Applovin")
 indexFile = path + "\\Applovin.html"
 newFile = path + "\\new\\"+da_name+"_Applovin.html"
 copy(indexFile,newFile)
 replaceFile(newFile,branch_path + "log.txt",branch_path+"link.txt")
+
+
+print("aarki")
+indexFile = path + "\\Applovin.html"
+newFile = path + "\\new\\"+da_name+"_aarki.html"
+copy(indexFile,newFile)
+replaceFile(newFile,branch_path + "log2.txt",branch_path+"link2.txt")
 
 print("Facebook")
 indexFile = path + "\\Facebook"

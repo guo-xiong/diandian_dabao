@@ -90,10 +90,17 @@ files_in_folder = list_files_in_folder(indexFile)
 #添加压缩文件
 create_zip_with_files(path + "\\new\\" + da_name + "_Google.zip", files_in_folder)
 
-print("Ironsource")
-indexFile = path + "\\Ironsource.html"
+# print("Ironsource")
+# indexFile = path + "\\Ironsource.html"
+# newFile = path + "\\new\\"+da_name+"_Ironsource.html"
+# copy(indexFile,newFile)
+print("Unity")
+indexFile = path + "\\Unity.html"
 newFile = path + "\\new\\"+da_name+"_Ironsource.html"
 copy(indexFile,newFile)
+replaceFile(newFile,branch_path + "log.txt",branch_path+"link.txt")
+
+
 # replaceFile(newFile,branch_path + "startGame.txt",branch_path+"startGame_new.txt")
 # replaceFile(newFile,branch_path + "startGame_end.txt",branch_path+"startGame_end_new.txt")
 
