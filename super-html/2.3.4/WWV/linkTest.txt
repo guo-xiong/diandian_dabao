@@ -1,0 +1,1 @@
+cc.sys.os==cc.sys.OS_IOS?mraid.open("https://apps.apple.com/app/id6621220868"):mraid.open("https://play.google.com/store/apps/details?id=com.crazy.game.friday&fbclid=IwY2xjawGeXZxleHRuA2FlbQIxMAABHdI8_2c5lkRImyiPZ5loasXl3SB0V9YhNb0ZmgM2rqqZzcVGM3ThI_5QzQ_aem_k7UJUGGi6xq36DyXkPRF9Q")

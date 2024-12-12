@@ -1,0 +1,1 @@
+cc.sys.os==cc.sys.OS_IOS?mraid.open("https://apps.apple.com/app/id6621220868"):mraid.open("https://play.google.com/store/apps/details?id=com.wwv.global")
